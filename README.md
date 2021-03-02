@@ -1,6 +1,5 @@
 ![](https://user-images.githubusercontent.com/45692573/109661256-b2fe8180-7b61-11eb-87c7-3d58cbea8d4b.png)
 
-* GitHub repo: https://github.com/audreyfeldroy/cookiecutter-pypackage/
 * Documentation: https://cookiecutter-pypackage.readthedocs.io/
 * Free software: BSD license
 
