@@ -1,0 +1,7 @@
+{
+    "project_name": "example",
+    "python_package_name": "project_package",
+    "author": "EMR",
+    "author_email": "",
+    "description": "An EMR package for analysis"
+}
