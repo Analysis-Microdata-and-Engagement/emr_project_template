@@ -1,0 +1,4 @@
+Ignore this file
+
+If however your curosity has gotten the best of you...
+This file is here becuase git won't track empty folders, so to include empty folders foldersthe standard structure this file is included 
