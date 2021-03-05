@@ -22,6 +22,5 @@ pip install -e ./
 
 If you want to unistall the package you can run:
 ```bash
-# package_name is whatever you renamed xxxx_python_package to
-pip uninstall package_name
+pip uninstall {{cookiecutter.project_name}}
 ```
