@@ -8,7 +8,7 @@
 
 ### User Guide
 
-You need to install your python package. This will make PIP track it like any other package.
+You need to install {{cookiecutter.python_package_name}}. This will make PIP track it like any other package.
 
 In a terminal run:
 
@@ -22,5 +22,14 @@ pip install -e ./
 
 If you want to unistall the package you can run:
 ```bash
-pip uninstall {{cookiecutter.project_name}}
+pip uninstall {{cookiecutter.python_package_name}}
+```
+
+```bash
+python main.py
+```
+
+# Tests
+```bash
+pytest
 ```
