@@ -1,0 +1,32 @@
+.PHONY: help test
+
+help:
+	@echo "---------------HELP-----------------------------------------"
+	@echo "setup - run the first time when you setup the project"
+	@echo "test - run tests quickly with the default Python test suite"	
+	@echo "docs -  create the documentation for the project"	
+	@echo "act -  ACTivate the conda enviroment"
+	@echo "deact -  DEACTivate the conda enviroment
+	@echo "------------------------------------------------------------"
+
+setup:
+	conda create -n project_name
+	activate_enviroment
+	conda install pip
+	pip install -r requirements.txt
+	pip install ./
+	
+test:
+	pytest
+
+docs:
+	cd docs
+	make html
+	open _build/html/index.html
+
+activate_enviroment:
+	conda activate project_name
+
+deactivate_enviroment:
+	conda deactivate
+
