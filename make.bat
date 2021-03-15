@@ -5,8 +5,8 @@ IF /I "%1"=="help" GOTO help
 IF /I "%1"=="setup" GOTO setup
 IF /I "%1"=="test" GOTO test
 IF /I "%1"=="docs" GOTO docs
-IF /I "%1"=="activate_enviroment" GOTO activate_enviroment
-IF /I "%1"=="deactivate_enviroment" GOTO deactivate_enviroment
+IF /I "%1"=="act" GOTO act
+IF /I "%1"=="deact" GOTO deact
 GOTO error
 
 :help
@@ -37,11 +37,11 @@ GOTO error
 	open _build/html/index.html
 	GOTO :EOF
 
-:activate_enviroment
+:act
 	conda activate project_name
 	GOTO :EOF
 
-:deactivate_enviroment
+:deact
 	conda deactivate
 	GOTO :EOF
 
