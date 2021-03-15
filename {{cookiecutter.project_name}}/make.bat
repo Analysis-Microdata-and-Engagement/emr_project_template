@@ -12,16 +12,16 @@ GOTO error
 :help
 	@echo "---------------HELP-----------------------------------------"
 	@echo "setup - run the first time when you setup the project"
-	@echo "test - run tests quickly with the default Python test suite"
-	@echo "docs -  create the documentation for the project"
-	@echo "act -  ACTivate the conda enviroment"
-	@echo "deact -  DEACTivate the conda enviroment
+	@echo "test  - run tests quickly with the default Python test suite"
+	@echo "docs  - create the documentation for the project"
+	@echo "act   - ACTivate the conda enviroment"
+	@echo "deact - DEACTivate the conda enviroment
 	@echo "------------------------------------------------------------"
 	GOTO :EOF
 
 :setup
-	conda create -n project_name
-	activate_enviroment
+	conda create -n {{cookiecutter.project_name}}
+	act
 	conda install pip
 	pip install -r requirements.txt
 	pip install ./
@@ -38,7 +38,7 @@ GOTO error
 	GOTO :EOF
 
 :act
-	conda activate project_name
+	conda activate {{cookiecutter.project_name}}
 	GOTO :EOF
 
 :deact
