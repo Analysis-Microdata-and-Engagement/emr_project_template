@@ -42,7 +42,9 @@ Files
 * requirements.txt - “Requirements files” are files containing a list of packages to be installed using pip install
 * setup.py - See below
 
+## Virtual environments
 
+To address the issue of maintaining different versions of packages for different projects, Python uses the concept of virtual environments. A virtual environment is a complete copy of the Python interpreter. When you install packages in a virtual environment, the system-wide Python interpreter is not affected, only the copy is. So the solution to have complete freedom to install any versions of your packages for each projects is to use a different virtual environment for each project. Virtual environments have the added benefit that they are owned by the user who creates them, so they do not require an administrator account.
 
 ### Optional folders
 This stucture is recommended but feel free to edit to match your project needs. In particular:
