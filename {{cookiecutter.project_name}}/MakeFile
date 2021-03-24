@@ -1,22 +1,18 @@
-.PHONY: help test docs act deact
+.PHONY: help setup test docs
 
 help:
 	@echo. 
-	@echo ---------------HELP-----------------------------------------
+	@echo --------------------------HELP-------------------------------
 	@echo setup - run the first time when you setup the project
 	@echo test  - run tests quickly with the default Python test suite
 	@echo docs  - create the documentation for the project	
-	@echo act   - ACTivate the conda enviroment
-	@echo deact - DEACTivate the conda enviroment
 	@echo ------------------------------------------------------------
 	@echo.
 	
 setup:
-	conda create -n {{cookiecutter.project_name}}
-	conda activate {{cookiecutter.project_name}}
-	conda install pip
 	pip install -r requirements.txt
 	pip install ./
+	pre-commit install
 	
 test:
 	pytest
@@ -26,9 +22,4 @@ docs:
 	make html
 	open _build/html/index.html
 
-act:
-	conda activate {{cookiecutter.project_name}}
-
-deact:
-	conda deactivate
 

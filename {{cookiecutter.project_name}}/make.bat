@@ -5,28 +5,22 @@ IF /I "%1"=="help" GOTO help
 IF /I "%1"=="setup" GOTO setup
 IF /I "%1"=="test" GOTO test
 IF /I "%1"=="docs" GOTO docs
-IF /I "%1"=="act" GOTO act
-IF /I "%1"=="deact" GOTO deact
 GOTO error
 
 :help
 	@echo.
-	@echo ---------------HELP-----------------------------------------
+	@echo --------------------------HELP-------------------------------
 	@echo setup - run the first time when you setup the project
 	@echo test  - run tests quickly with the default Python test suite
 	@echo docs  - create the documentation for the project
-	@echo act   - ACTivate the conda enviroment
-	@echo deact - DEACTivate the conda enviroment
 	@echo ------------------------------------------------------------
 	@echo.
 	GOTO :EOF
 
 :setup
-	conda create -n {{cookiecutter.project_name}}
-	conda activate {{cookiecutter.project_name}}
-	conda install pip
 	pip install -r requirements.txt
 	pip install ./
+	pre-commit install
 	GOTO :EOF
 
 :test
@@ -37,14 +31,6 @@ GOTO error
 	PUSHD docs && POPD
 	make html
 	open _build/html/index.html
-	GOTO :EOF
-
-:act
-	conda activate {{cookiecutter.project_name}}
-	GOTO :EOF
-
-:deact
-	conda deactivate
 	GOTO :EOF
 
 :error
