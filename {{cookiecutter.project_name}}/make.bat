@@ -28,9 +28,8 @@ GOTO error
 	GOTO :EOF
 
 :docs
-	PUSHD docs && POPD
-	make html
-	open _build/html/index.html
+	CALL make.bat -C docs html
+	start .\docs\_build\html\index.html
 	GOTO :EOF
 
 :error

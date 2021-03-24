@@ -1,2 +1,5 @@
 pre-commit
 sphinx
+pytest
+myst_parser
+sphinx_rtd_theme
