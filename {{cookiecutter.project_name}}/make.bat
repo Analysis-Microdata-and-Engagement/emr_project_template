@@ -5,6 +5,7 @@ IF /I "%1"=="help" GOTO help
 IF /I "%1"=="setup" GOTO setup
 IF /I "%1"=="test" GOTO test
 IF /I "%1"=="docs" GOTO docs
+IF /I "%1"=="view" GOTO view
 GOTO error
 
 :help
@@ -13,6 +14,7 @@ GOTO error
 	@echo setup - run the first time when you setup the project
 	@echo test  - run tests quickly with the default Python test suite
 	@echo docs  - create the documentation for the project
+	@echo view  - Open the built documentation in the web browser. run make docs first
 	@echo ------------------------------------------------------------
 	@echo.
 	GOTO :EOF
@@ -28,8 +30,13 @@ GOTO error
 	GOTO :EOF
 
 :docs
-	CALL make.bat -C docs html
-	start .\docs\_build\html\index.html
+	cd docs
+	CALL make.bat html
+	start _build\html\index.html
+	GOTO :EOF
+
+:view
+	start docs\_build\html\index.html
 	GOTO :EOF
 
 :error
