@@ -1,13 +1,22 @@
 ![](https://user-images.githubusercontent.com/45692573/109661256-b2fe8180-7b61-11eb-87c7-3d58cbea8d4b.png)
 
-* Documentation: https://cookiecutter-pypackage.readthedocs.io/
-* Free software: BSD license
+# Overview
+
+EMR project template tool. This is the standard way to create projects in EMR. See the EMR best practice guide for more details.
+
+## Features
+* standard Project structure in line with EMR best pratice document
+* .gitignore 
+* pre-commit git hook to prevent disclosuive data being released 
+* EMR peer review templates included and configured 
+* Documentation pre-configured to automatically build
+* Standard EMR documenation included
+* Tests pre-configured
 
 ## Quickstart
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires
 Cookiecutter 1.4.0 or higher)
-
 
 ```python
 pip install -U cookiecutter
