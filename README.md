@@ -24,7 +24,7 @@ pip install -U cookiecutter
 
 Run the project template builder using
 ```bash
-cookiecutter https://github.com/Kiki-Jiji/emr_cookiecutter
+cookiecutter https://github.com/Analysis-Microdata-and-Engagement/emr_project_template
 ```
 
 # EMR Standard Python Project Structure
