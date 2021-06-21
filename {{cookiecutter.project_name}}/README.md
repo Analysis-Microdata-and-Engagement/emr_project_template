@@ -11,6 +11,8 @@
 * Create virtual environment
 * Run first time setup using `make`
 
+>`make` is the standard interface for the project
+
 ### virtual environment
 
 It's recommending to run this project in a virtual environments. 
@@ -43,11 +45,14 @@ Run `setup`. This does a number of steps
 * Install pre-commit-hooks
 
 ```shell
-make setup
-```
+./make.bat help # run this to get all available options
 
+./make.bat setup
+```
+> `./make.bat` runs the program followed by the desired option  
+> You can edit this to run additional project tasks
 
 # Tests
 ```bash
-make test
+./make.bat test
 ```
