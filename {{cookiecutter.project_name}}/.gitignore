@@ -13,6 +13,8 @@
 
 *.tmp
 
+.vscode
+
 # Word temporary
 ~$*.doc*
 
